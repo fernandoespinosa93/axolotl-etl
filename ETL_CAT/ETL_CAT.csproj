@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{161929D9-B26F-4DAF-B8DD-7F7A16FC3F5E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ETL_CAT</RootNamespace>
+    <AssemblyName>ETL_CAT</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="formConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formConfiguracion.Designer.cs">
+      <DependentUpon>formConfiguracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPrincipal.Designer.cs">
+      <DependentUpon>formPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formInicio.Designer.cs">
+      <DependentUpon>formInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formReglas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formReglas.Designer.cs">
+      <DependentUpon>formReglas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formExportacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formExportacion.Designer.cs">
+      <DependentUpon>formExportacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formConfiguracion.resx">
+      <DependentUpon>formConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formExportacion.resx">
+      <DependentUpon>formExportacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formReglas.resx">
+      <DependentUpon>formReglas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPrincipal.resx">
+      <DependentUpon>formPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formInicio.resx">
+      <DependentUpon>formInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_lateral.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_lateral_sup.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\superior.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sup2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-xxl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow-folder-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sql-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circulo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i4.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i2o.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i3o.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i5o.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_claro.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Antu_minimize_hover.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajolote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="560249-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img_356946.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img_520301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="btn_slidemenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fotos menu\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fotos menu\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fotos menu\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fotos menu\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fotos menu\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fotos menu\64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\common.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconoAxolotl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archivo en blanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuevo archio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limpiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deshacer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Archivos.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archivo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transformar.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transformar1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exportar.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Disconect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conect server.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filesi.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reglasi.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SQLi.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transoformi.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Excel\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
